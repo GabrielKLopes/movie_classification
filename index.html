@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Escolha seu Filme</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha seu Filme</h1>
+        <form id="filmForm">
+            <label for="age">Idade:</label>
+            <input type="number" id="age" name="age" required min="1">
+
+            <div class="categories">
+                <label>Categoria de Filme:</label><br>
+                <br>
+                <input type="checkbox" id="action" name="category" value="Ação">
+                <label for="action" class="checkbox">Ação</label>
+                
+                <input type="checkbox" id="comedy" name="category" value="Comédia">
+                <label for="comedy" class="checkbox">Comédia</label>
+                
+                <input type="checkbox" id="drama" name="category" value="Drama">
+                <label for="drama" class="checkbox">Drama</label>
+
+                <input type="checkbox" id="animation" name="category" value="Animação">
+                <label for="animation" class="checkbox">Animação</label>
+                
+                <input type="checkbox" id="suspense" name="category" value="Suspense">
+                <label for="suspense" class="checkbox">Suspense</label>
+                
+                <input type="checkbox" id="horror" name="category" value="Terror">
+                <label for="horror" class="checkbox">Terror</label>
+                
+                <input type="checkbox" id="sciFi" name="category" value="Ficção Científica">
+                <label for="sciFi" class="checkbox">Ficção Científica</label>
+
+                <input type="checkbox" id="adventure" name="category" value="Aventura">
+                <label for="adventure" class="checkbox">Aventura</label>
+
+                <input type="checkbox" id="free" name="category" value="Livre">
+                <label for="free" class="checkbox">livre</label>
+            </div>
+
+            <button type="submit">Confirmar</button>
+        </form>
+
+        <div id="movieResults"></div>
+    </div>
+
+    <script type="module" src="index.js"></script>
+</body>
+</html>
