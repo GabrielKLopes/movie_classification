@@ -12,13 +12,16 @@ document.getElementById('filmForm').addEventListener('submit', function (event) 
     selectedCategories.push(categories[i].value);
   }
 
-  // Verifica se a categoria "Livre" está selecionada e a idade está entre 1 e 9
+  // Filtra os filmes com base na idade e categorias
   let filteredMovies;
-  if (selectedCategories.includes("Livre") && age >= 1 && age <= 9) {
-    // Filtra apenas filmes com classificação indicativa de 0 a 9
-    filteredMovies = movies.filter(movie => movie.ageRating <= 9);
+  if (age >= 1 && age <= 9) {
+    // Filtra filmes adequados para idade de 0 a 9
+    filteredMovies = movies.filter(
+      (movie) =>
+        movie.ageRating <= 9 && selectedCategories.includes(movie.genre)
+    );
   } else {
-    // Filtra os filmes pela categoria selecionada e pela idade
+    // Filtra filmes com base na categoria e idade
     filteredMovies = movies.filter(
       (movie) =>
         selectedCategories.includes(movie.genre) && movie.ageRating <= age
